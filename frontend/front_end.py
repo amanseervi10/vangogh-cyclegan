@@ -26,7 +26,7 @@ if uploaded_file is not None:
         input_data = np.expand_dims(input_data, axis=0)  # Add batch dimension
 
         # Send the image data to the Flask backend for processing
-        response = requests.post("http://localhost:5000/vangoghify", json={"input_data": input_data.tolist()})
+        response = requests.post("https://photo2vangogh.onrender.com/vangoghify", json={"input_data": input_data.tolist()})
 
         if response.status_code == 200:
             # print(response.json())
