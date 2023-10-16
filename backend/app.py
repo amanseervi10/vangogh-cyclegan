@@ -28,7 +28,7 @@ def vangoghify():
     # output_image_data = (output_image_data * 0.5 + 0.5).clip(0.0, 1.0)
     # output_image_data = (output_image_data * 255.0).astype(np.uint8)
 
-    print(output_image_data.shape)
+    # print(output_image_data.shape)
 
     # Prepare the output image for sending to the frontend
     # output_image = output_image_data.tobytes()
