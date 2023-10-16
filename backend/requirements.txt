@@ -21,3 +21,4 @@ sympy==1.10.1
 Werkzeug==2.2.3
 wheel==0.41.2
 zipp==3.11.0
+Gunicorn
