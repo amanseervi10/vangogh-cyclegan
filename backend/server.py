@@ -15,10 +15,12 @@ def index():
 
 @app.route('/vangoghify', methods=['POST'])
 def vangoghify():
+    print("here")
     input_data = np.array(request.json['input_data'], dtype=np.float32)
 
     # Perform inference
     output = ort_session.run(None, {'input.1': input_data})
+    print("here also")
 
     # Process the output data (e.g., scaling, normalization)
     output_image_data = output[0].squeeze() 
@@ -34,5 +36,5 @@ def vangoghify():
 
     return jsonify({'output_image': output_image_base64})
 
-if __name__ == '__main__':
-    app.run(port=5000, debug=True)
+# if __name__ == '__main__':
+#     app.run(port=5000, debug=True)
